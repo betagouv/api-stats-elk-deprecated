@@ -35,5 +35,8 @@ function buildQueryFromReq (req) {
   query.push({
     match: { tags: req.params.host }
   })
+  query.push({
+    exists: { field: 'consumer.organisation' }
+  })
   return query
 }
