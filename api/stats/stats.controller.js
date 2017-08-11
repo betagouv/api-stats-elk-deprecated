@@ -17,7 +17,7 @@ module.exports = class StatsController {
       index: this.es.index,
       body: { query: { bool: { must: query } } }
     }).then((response) => {
-      res.data = response
+      res.data = response.count
       return next()
     }).catch((error) => {
       return next(new StandardError(error.body, {code: 400}))

@@ -33,7 +33,7 @@ describe('stats Controller', function () {
       }
       const res = {}
       return controller.count(req, res, function () {}).then((response) => {
-        expect(res.data.count).to.gte(0)
+        expect(res.data).to.gte(0)
       })
     })
 
@@ -46,7 +46,7 @@ describe('stats Controller', function () {
       }
       const res = {}
       return controller.count(req, res, function () {}).then((response) => {
-        expect(res.data.count).to.gte(0)
+        expect(res.data).to.gte(0)
       })
     })
 
