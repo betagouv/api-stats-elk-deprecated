@@ -14,5 +14,6 @@ module.exports = {
   raven: {
     activate: false,
     dsn: ''
-  }
+  },
+  logginPath: '/tmp/api-elk-stats.log'
 }
