@@ -2,4 +2,4 @@
 *.orig
 
 /node_modules
-/coverage
+access.log
