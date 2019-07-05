@@ -29,7 +29,7 @@ app.get("/api/stats", (req, res, next) => {
   const success_count_last_30_days = cache.get("success_count_last_30_days");
 
   if (success_count_last_30_days) {
-    return res.json({ success_count_last_30_days });
+    return res.json(success_count_last_30_days);
   }
 
   axios({
@@ -69,7 +69,7 @@ app.get("/api/stats", (req, res, next) => {
       console.log("request made to elasticsearch");
       cache.set("success_count_last_30_days", total);
 
-      return res.json({ success_count_last_30_days: total });
+      return res.json(total);
     })
     .catch(function(error) {
       console.error(error);
